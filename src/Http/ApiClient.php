@@ -317,7 +317,7 @@ class ApiClient
         } else {
             return [
                 self::OPTION_CURL => [
-                    CURLOPT_PINNEDPUBLICKEY => $this->determinePinnedServerPublicKey(),
+                    //CURLOPT_PINNEDPUBLICKEY => $this->determinePinnedServerPublicKey(),
                 ],
             ];
         }
