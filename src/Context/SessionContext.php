@@ -131,7 +131,7 @@ class SessionContext implements JsonSerializable
     {
         $microseconds = ($microtime - floor($microtime)) * self::MICROSECONDS_IN_SECOND;
         $microsecondsFormatted = sprintf(self::FORMAT_MICROSECONDS, $microseconds);
-        $dateFormatted = date(self::FORMAT_MICRO_TIME_PARTIAL . $microsecondsFormatted, $microtime);
+        $dateFormatted = date(self::FORMAT_MICRO_TIME_PARTIAL . $microsecondsFormatted, floor($microtime));
 
         return new DateTime($dateFormatted);
     }
